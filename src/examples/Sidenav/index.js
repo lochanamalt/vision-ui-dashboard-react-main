@@ -33,11 +33,10 @@ import Icon from "@mui/material/Icon";
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
-import VuiButton from "components/VuiButton";
 
 // Vision UI Dashboard React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
-import SidenavCard from "examples/Sidenav/SidenavCard";
+
 
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
@@ -45,7 +44,13 @@ import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 
 // Vision UI Dashboard React context
 import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "context";
-import SimmmpleLogo from "../Icons/SimmmpleLogo";
+
+
+// Images
+import LochanaMarasinghe from "assets/images/profile-pic.png";
+// Vision UI Dashboard React base styles
+import VuiAvatar from "components/VuiAvatar";
+
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
 function Sidenav({ color, brandName, routes, ...rest }) {
@@ -162,6 +167,22 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             <Icon sx={{ fontWeight: "bold" }}>close</Icon>
           </VuiTypography>
         </VuiBox>
+        
+        <VuiAvatar 
+        sx={
+          ((theme) => sidenavLogoLabel(theme, { miniSidenav }),
+          {
+            display: "flex",
+            alignItems: "center",
+            margin: "10px auto",
+          })
+        }
+              src={LochanaMarasinghe}
+              alt="profile-image"
+              variant="rounded"
+              size="xxl"
+              shadow="sm"
+        />
         <VuiBox component={NavLink} to="/" display="flex" alignItems="center">
           <VuiBox
             sx={
@@ -173,17 +194,6 @@ function Sidenav({ color, brandName, routes, ...rest }) {
               })
             }
           >
-            <VuiBox
-              display="flex"
-              sx={
-                ((theme) => sidenavLogoLabel(theme, { miniSidenav, transparentSidenav }),
-                {
-                  mr: miniSidenav || (miniSidenav && transparentSidenav) ? 0 : 1,
-                })
-              }
-            >
-              <SimmmpleLogo size="24px" />
-            </VuiBox>
             {/**/}
             <VuiTypography
               variant="button"
@@ -222,20 +232,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
           },
         })}
       >
-        <SidenavCard color={color} />
-        <VuiBox mt={2}>
-          <VuiButton
-            component="a"
-            href="https://creative-tim.com/product/vision-ui-dashboard-pro-react"
-            target="_blank"
-            rel="noreferrer"
-            variant="gradient"
-            color={color}
-            fullWidth
-          >
-            Upgrade to PRO
-          </VuiButton>
-        </VuiBox>
+      
       </VuiBox>
     </SidenavRoot>
   );
