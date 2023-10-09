@@ -22,16 +22,16 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
+import Tooltip from "@mui/material/Tooltip";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
 // Vision UI Dashboard React base styles
-import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-function ProfileInfoCard({ title, description, info, social }) {
+function ProfileInfoCard({ title, description, info, social , professional}) {
   const labels = [];
   const values = [];
   const { size } = typography;
@@ -81,40 +81,102 @@ function ProfileInfoCard({ title, description, info, social }) {
     </VuiBox>
   ));
 
+  const renderProfessional = (professional) ? professional.map(({ link, icon, platform }) => (
+    <VuiBox
+      key={platform}
+      component="a"
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      fontSize={size.lg}
+      color="white"
+      pr={1}
+      pl={0.5}
+      pb={2}
+   
+    >
+      <Tooltip title={platform}>
+        <img width="30"  alt="plaform-icon" src={icon}/>
+      </Tooltip>
+      
+    </VuiBox>
+
+  )) : [];
+
   return (
     <Card
       sx={{
         height: "100%",
       }}
     >
-      <VuiBox display="flex" mb="14px" justifyContent="space-between" alignItems="center">
-        <VuiTypography variant="lg" fontWeight="bold" color="white" textTransform="capitalize">
-          {title}
-        </VuiTypography>
-      </VuiBox>
+       { title && title.length > 0 &&
+        <VuiBox display="flex" mb="14px" justifyContent="space-between" alignItems="center">
+            <VuiTypography variant="lg" fontWeight="bold" color="white" textTransform="capitalize">
+              {title}
+            </VuiTypography>
+        </VuiBox>
+      }
       <VuiBox>
-        <VuiBox mb={2} lineHeight={1}>
-          <VuiTypography variant="button" color="text" fontWeight="regular">
-            {description}
-          </VuiTypography>
-        </VuiBox>
-        <VuiBox opacity={0.3}>
-          <Divider />
-        </VuiBox>
+        { description && description.length > 0 &&
+          <VuiBox mb={2} lineHeight={1} sx={{ whiteSpace: "pre-line" }}>
+            <VuiTypography variant="button" color="text" fontWeight="regular">
+              {description}
+            </VuiTypography>
+          </VuiBox>
+        }
+        { description && description.length > 0 && 
+          <VuiBox opacity={0.3}>
+            <Divider />
+          </VuiBox>
+        }
         <VuiBox>
           {renderItems}
-          <VuiBox display="flex" py={1} pr={2} color="white">
+          { renderSocial && renderSocial.length > 0 && <VuiBox display="flex" py={1} pr={2} color="white">
             <VuiTypography
               variant="button"
               fontWeight="regular"
               color="text"
-              textTransform="capitalize"
             >
               social: &nbsp;
             </VuiTypography>
             {renderSocial}
-          </VuiBox>
+          </VuiBox>}
         </VuiBox>
+
+        { renderProfessional && renderProfessional.length > 0 &&
+          <VuiBox opacity={0.3}>
+            <Divider />
+          </VuiBox>
+        }
+        
+        { renderProfessional && renderProfessional.length > 0 &&
+          <VuiTypography
+            color="white"
+            variant="lg" fontWeight="bold" 
+          >
+            You can find me on: &nbsp;
+          </VuiTypography>
+
+        }
+        { renderProfessional && renderProfessional.length > 0 &&
+            <VuiBox opacity={0.3}>
+              <Divider />
+            </VuiBox>
+
+        }
+        { renderProfessional && renderProfessional.length > 0 &&
+            <VuiBox>
+  {/* sx={{ "grid-auto-flow": "column", "justify-content": "space-evenly", gap: "20px" }}  */}
+  {/* sx={{ display: "flex", "flex-wrap": "wrap", "gap": "20px"}} */}
+
+              <VuiBox display="grid"  sx={{"grid-template-columns": "repeat(auto-fit, minmax(80px, 1fr))"}} py={1} pr={2} color="white">
+                {renderProfessional}
+              </VuiBox>
+            </VuiBox>
+        }
+
+      
+
       </VuiBox>
     </Card>
   );

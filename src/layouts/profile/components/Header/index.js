@@ -76,7 +76,7 @@ function Header() {
         <Grid
           container
           alignItems="center"
-          justifyContent="center"
+          justifyContent="left"
           sx={({ breakpoints }) => ({
             [breakpoints.up("xs")]: {
               gap: "16px",
@@ -89,30 +89,8 @@ function Header() {
             },
           })}
         >
-          <Grid
-            item
-            xs={12}
-            md={1.7}
-            lg={1.5}
-            xl={1.2}
-            xxl={0.8}
-            display="flex"
-            sx={({ breakpoints }) => ({
-              [breakpoints.only("sm")]: {
-                justifyContent: "center",
-                alignItems: "center",
-              },
-            })}
-          >
-            <VuiAvatar
-              src={burceMars}
-              alt="profile-image"
-              variant="rounded"
-              size="xl"
-              shadow="sm"
-            />
-          </Grid>
-          <Grid item xs={12} md={4.3} lg={4} xl={3.8} xxl={7}>
+        
+          <Grid item >
             <VuiBox
               height="100%"
               mt={0.5}
@@ -121,20 +99,20 @@ function Header() {
               flexDirection="column"
               sx={({ breakpoints }) => ({
                 [breakpoints.only("sm")]: {
-                  justifyContent: "center",
-                  alignItems: "center",
+                  justifyContent: "left",
+                  alignItems: "flex-start;",
                 },
               })}
             >
               <VuiTypography variant="lg" color="white" fontWeight="bold">
-                Mark Johnson
+                Lochana Marasinghe
               </VuiTypography>
-              <VuiTypography variant="button" color="text" fontWeight="regular">
-                mark@simmmple.com
+              <VuiTypography  color="text" fontWeight="regular">
+              Full Stack Software Engineer | BSc. (Hons) | AMIE(SL) | AEng (ECSL)
               </VuiTypography>
             </VuiBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={6.5} xl={6} xxl={4} sx={{ ml: "auto" }}>
+          {/* <Grid item xs={12} md={6} lg={6.5} xl={6} xxl={4} sx={{ ml: "auto" }}>
             <AppBar position="static">
               <Tabs
                 orientation={tabsOrientation}
@@ -143,11 +121,11 @@ function Header() {
                 sx={{ background: "transparent", display: "flex", justifyContent: "flex-end" }}
               >
                 <Tab label="OVERVIEW" icon={<IoCube color="white" size="16px" />} />
-                <Tab label="TEAMS" icon={<IoDocument color="white" size="16px" />} />
+                <Tab label="SKILLS" icon={<IoDocument color="white" size="16px" />} />
                 <Tab label="PROJECTS" icon={<IoBuild color="white" size="16px" />} />
               </Tabs>
             </AppBar>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Card>
     </VuiBox>

@@ -25,6 +25,8 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
+import Link from "@mui/material/Link";
+import ToolTip from "@mui/material/Tooltip";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -47,6 +49,9 @@ import routes from "routes";
 
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
+
+// import CV
+import DownloadCV from "assets/documents/Lochana_Marasingh_CV.pdf"
 
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
@@ -109,6 +114,7 @@ export default function App() {
     });
 
   const configsButton = (
+    <ToolTip title="Download CV">
     <VuiBox
       display="flex"
       justifyContent="center"
@@ -124,12 +130,23 @@ export default function App() {
       zIndex={99}
       color="white"
       sx={{ cursor: "pointer" }}
-      onClick={handleConfiguratorOpen}
+      // onClick={handleConfiguratorOpen}
+      
     >
-      <Icon fontSize="default" color="inherit">
-        settings
-      </Icon>
+      <Link href={DownloadCV}
+         download="Lochana_Marasinghe_CV"
+         target="_blank"
+         color="white"
+         rel="noreferrer"
+         >
+              
+          <Icon fontSize="default"  sx={{ color: "white !important" }}
+          >
+            download
+          </Icon>
+      </Link>
     </VuiBox>
+    </ToolTip>
   );
 
   return direction === "rtl" ? (
