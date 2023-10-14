@@ -5,7 +5,6 @@
 	"author": "Creative Tim",
 	"license": "See license in https://www.creative-tim.com/license",
 	"description": "Material UI version of Vision UI Dashboard by Creative Tim",
-	"homepage": "https://demos.creative-tim.com/vision-ui-dashboard-react/#/profile",
 	"bugs": {
 		"url": "https://github.com/creativetimofficial/vision-ui-dashboard-react/issues"
 	},
@@ -45,7 +44,7 @@
 		"web-vitals": "1.0.1"
 	},
 	"scripts": {
-		"start": "react-scripts --openssl-legacy-provider start",
+		"start": "react-scripts start --openssl-legacy-provider",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
