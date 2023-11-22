@@ -41,7 +41,7 @@ import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/Items/NotificationItem";
 
 // import CV
-import DownloadCV from "assets/documents/Lochana_Marasingh_CV.pdf"
+import DownloadCV from "assets/documents/Lochana_Marasinghe_CV.pdf"
 
 // Custom styles for DashboardNavbar
 import {

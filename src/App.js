@@ -51,7 +51,7 @@ import routes from "routes";
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // import CV
-import DownloadCV from "assets/documents/Lochana_Marasingh_CV.pdf"
+import DownloadCV from "assets/documents/Lochana_Marasinghe_CV.pdf"
 
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
