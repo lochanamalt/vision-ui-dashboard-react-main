@@ -108,8 +108,7 @@ function Overview() {
               I'm well-versed in deploying applications on Google Cloud Platform and using Git for version control, and I'm no stranger to Agile principles.
               
               In my academic journey, I dabbled in various domains, including software engineering, electronics, and telecommunication. I also had the pleasure of diving into robotics, which has remained a passionate hobby of mine. Additionally, I ventured into machine learning, IoT and embedded systems projects, gaining hands-on experience.
-             
-              I enjoy meeting new people over a cup of coffee. Feel free to reach out at lochanatharanganie@gmail.com. Let's chat and explore exciting opportunities!`}
+`}
 
               info={{}}
               social={[]}
@@ -131,9 +130,7 @@ function Overview() {
               title=""
               description=""
               info={{
-                name: "Lochana Marasinghe",
-                email: "lochanatharanganie@gmail.com",
-                location: "Sri Lanka",
+                name: "Lochana Marasinghe"
               }}
               social={[]}
               professional={[
