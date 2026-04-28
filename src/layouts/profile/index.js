@@ -107,8 +107,7 @@ function Overview() {
               With over 3 years of industry experience at CodeGen International, I've become proficient in building web applications. My tech toolkit includes Java, Spring Boot, Angular, RESTful API, TypeScript, Javascript, HTML, CSS, and databases like MySQL, Redis, Neo4j, and Elasticsearch. 
               I'm well-versed in deploying applications on Google Cloud Platform and using Git for version control, and I'm no stranger to Agile principles.
               
-              In my academic journey, I dabbled in various domains, including software engineering, electronics, and telecommunication. I also had the pleasure of diving into robotics, which has remained a passionate hobby of mine. Additionally, I ventured into machine learning, IoT and embedded systems projects, gaining hands-on experience.
-`}
+              In my academic journey, I dabbled in various domains, including software engineering, electronics, and telecommunication. I also had the pleasure of diving into robotics, which has remained a passionate hobby of mine. Additionally, I ventured into machine learning, IoT and embedded systems projects, gaining hands-on experience.`}
 
               info={{}}
               social={[]}
