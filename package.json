@@ -12,6 +12,16 @@
 		"type": "git",
 		"url": "git+https://github.com/creativetimofficial/vision-ui-dashboard-react.git"
 	},
+	"babel": {
+	  "presets": [
+	    [
+	      "react-app",
+	      {
+	        "runtime": "automatic"
+	      }
+	    ]
+	  ]
+	},
 	"dependencies": {
 		"@emotion/cache": "11.4.0",
 		"@emotion/react": "^11.9.3",
