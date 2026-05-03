@@ -130,7 +130,6 @@ function Overview() {
               description=""
               info={{
                 name: "Lochana Marasinghe",
-                email: "lochanatharanganie@gmail.com",
                 location: "Sri Lanka",
               }}
               social={[]}
