@@ -53,7 +53,7 @@ import VuiAvatar from "components/VuiAvatar";
 
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
-function Sidenav({ color, brandName, routes, ...rest }) {
+function Sidenav({ color = "info", brandName, routes, ...rest }) {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, transparentSidenav } = controller;
   const location = useLocation();
@@ -239,10 +239,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
 }
 
 // Setting default values for the props of Sidenav
-Sidenav.defaultProps = {
-  color: "info",
-  // brand: "",
-};
+// Sidenav.defaultProps = {
+//   color: "info",
+//   // brand: "",
+// };
+
 
 // Typechecking props for the Sidenav
 Sidenav.propTypes = {
