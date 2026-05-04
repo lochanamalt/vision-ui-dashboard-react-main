@@ -13,6 +13,7 @@
 		"url": "git+https://github.com/creativetimofficial/vision-ui-dashboard-react.git"
 	},
 	"dependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@emotion/cache": "11.4.0",
 		"@emotion/react": "^11.9.3",
 		"@emotion/styled": "^11.9.3",
@@ -36,10 +37,10 @@
 		"react-github-btn": "1.2.1",
 		"react-icons": "^4.3.1",
 		"react-router-dom": "5.2.0",
-		"react-scripts": "4.0.3",
+		"react-scripts": "^5.0.1",
 		"stylis": "4.0.10",
 		"stylis-plugin-rtl": "2.1.0",
-		"uuid": "8.3.2",
+		"uuid": "^14.0.0",
 		"web-vitals": "1.0.1"
 	},
 	"scripts": {
