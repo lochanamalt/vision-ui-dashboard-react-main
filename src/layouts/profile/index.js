@@ -102,12 +102,9 @@ function Overview() {
           >
             <ProfileInfoCard
               title="Greetings!"
-              description={`I'm Lochana, a software engineer with a Bachelor's degree in Electrical and Information Engineering, specializing in Software Engineering, and a postgraduate diploma in Computer Science.
-              
-              With over 3 years of industry experience at CodeGen International, I've become proficient in building web applications. My tech toolkit includes Java, Spring Boot, Angular, RESTful API, TypeScript, Javascript, HTML, CSS, and databases like MySQL, Redis, Neo4j, and Elasticsearch. 
-              I'm well-versed in deploying applications on Google Cloud Platform and using Git for version control, and I'm no stranger to Agile principles.
-              
-              In my academic journey, I dabbled in various domains, including software engineering, electronics, and telecommunication. I also had the pleasure of diving into robotics, which has remained a passionate hobby of mine. Additionally, I ventured into machine learning, IoT and embedded systems projects, gaining hands-on experience.`}
+              description={`I am a Doctoral Candidate in the Biological Systems Engineering Department at Washington State University, specializing in the integration of IoT and AI for agricultural automation. By combining my background in software and hardware with a passion for robotics and machine learning, my research focuses on creating intelligent, end-to-end solutions that solve complex challenges in the agricultural sector.
+
+Originally from Sri Lanka, I earned my B.Sc. (Hons) in Electrical and Information Engineering (specializing in Software Engineering) before pursuing a postgraduate diploma in Computer Science. My expertise is built on a strong foundation in Software Engineering, Electronics, and Embedded Systems. Before embarking on my PhD, I spent over three years as a software engineer at CodeGen International, where I gained extensive experience in full-stack development using Java, Spring Boot, and Angular, alongside cloud deployment and Agile methodologies. A long-time robotics enthusiast, I remain passionate about integrating complex software solutions with physical embedded systems to solve real-world problems.`}
 
               info={{}}
               social={[]}
@@ -129,7 +126,6 @@ function Overview() {
               title=""
               description=""
               info={{
-                name: "Lochana Marasinghe"
               }}
               social={[]}
               professional={[
